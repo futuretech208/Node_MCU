@@ -120,22 +120,22 @@ const String HtmlTitle = "<h1>NodeMCU 8 relay control board</h1><br/>\n";
 //const String HtmlRelay1statelow = "<big>Relay 1 is <b>ON</b></big><br/>\n";
 //const String HtmlRelay1statehigh = "<big>Relay 1 is <b>OFF</b></big><br/>\n";
 const String HtmlButtons = 
-    "<a href=\"R1On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R1Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R2On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R2Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R3On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R3Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R4On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R4Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R5On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R5Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R6On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R6Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R7On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R7Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>"
-    "<a href=\"R8On\"><button style=\"display: block; width: 50%;\">ON</button></a><br/>"
-    "<a href=\"R8Off\"><button style=\"display: block; width: 50%;\">OFF</button></a><br/>";
+    "<a href=\"R1On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 1 ON</button></a>"
+    "<a href=\"R1Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 1 OFF</button></a><br/><br/>"
+    "<a href=\"R2On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 2 ON</button></a>"
+    "<a href=\"R2Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 2 OFF</button></a><br/><br/>"
+    "<a href=\"R3On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 3 ON</button></a>"
+    "<a href=\"R3Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 3 OFF</button></a><br/><br/>"
+    "<a href=\"R4On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 4 ON</button></a>"
+    "<a href=\"R4Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 4 OFF</button></a><br/><br/>"
+    "<a href=\"R5On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 5 ON</button></a>"
+    "<a href=\"R5Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 5 OFF</button></a><br/><br/>"
+    "<a href=\"R6On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 6 ON</button></a>"
+    "<a href=\"R6Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 6 OFF</button></a><br/><br/>"
+    "<a href=\"R7On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 7 ON</button></a>"
+    "<a href=\"R7Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 7 OFF</button></a><br/><br/>"
+    "<a href=\"R8On\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 8 ON</button></a>"
+    "<a href=\"R8Off\"><button style=\"display: inline-block; width: 50%; margin: 5px auto; text-align: center;\">Relay 8 OFF</button></a><br/><br/>";
     
 void response()
 {
@@ -201,11 +201,9 @@ void setup() {
   digitalWrite(D7, stateRelay7);
   pinMode(D8, OUTPUT);
   digitalWrite(D8, stateRelay8);
-    
-//    pinMode(D1, OUTPUT);
-//    digitalWrite(D1, stateLED);
 }
 
-void loop() {
+void loop() 
+{
     server.handleClient();
 }
