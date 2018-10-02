@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-char ssid[] = "NETGEAR18";
-char pass[] = "grandmango431";
+char ssid[] = "qccesspoint name";
+char pass[] = "password goes here";
 IPAddress ip(192, 168, 1, 50); //set static ip
 IPAddress gateway(192, 168, 1, 1); //set getteway
 IPAddress subnet(255, 255, 255, 0);//set subnet
